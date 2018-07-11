@@ -56,31 +56,75 @@ section {
     text-align: center;
 }
 
-.contacts .container {
+.items-container {
+    max-width: 600px;
+    margin: auto;
+}
+
+.items-container .item {
     display: flex;
-    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 30px;
 }
 
-.contacts .address-container, .contacts .time-container {
-    width: 50%;
-    display: flex;
-    max-width: 400px;
-    padding: 0 20px;
-}
-
-.contacts .address-container .text, .contacts .time-container .text {
-    display: inline-block;
-    padding-left: 50px;
-    font-size: 26px;
-    line-height: 1.5;
-    letter-spacing: 0.5px;
-}
-
-.contacts .address-container img, .contacts .time-container img {
-    width: 50px;
+.items-container .item img {
+    margin-bottom: 0;
+    margin-right: 20px;
     height: 50px;
 }
 
+.items-container .item .item-text {
+    font-size: 24px;
+    text-align: left;
+    font-weight: 100;
+    line-height: 1.5;
+}
+
+.contacts {
+    display: flex;
+    font-weight: 100;
+}
+
+.contacts .contacts-block {
+    display: inline-block;
+    float: left;
+    width: 45%;
+    background-color: #20203A;
+}
+
+.contacts .map-block {
+    display: inline-block;
+    float: right;
+    width: 55%;
+}
+
+.contacts .contact-container {
+    display: table;
+    margin-bottom: 20px;
+}
+
+.contacts .contacts-inner {
+    display: inline-block;
+    float: right;
+    margin-right: 10%;
+    margin-top: 20%;
+}
+
+.contacts .contact-container img {
+    width: 30px;
+    height: 30px;
+    display: table-cell;
+    margin-bottom: 0;
+    vertical-align: middle;
+    margin-right: 20px;
+}
+
+.contacts .contact-container .text {
+    color: white;
+    display: table-cell;
+    margin-bottom: 0;
+    vertical-align: middle;
+}
 
 @media screen and (max-width: 780px) {
     .contacts .container {

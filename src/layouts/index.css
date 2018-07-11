@@ -1,5 +1,6 @@
 html {
-  font-family: 'DIN Pro Cond light';
+  /*font-family: 'DIN Pro Cond light';*/
+  font-family: 'Source Sans Pro', sans-serif !important;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
@@ -198,8 +199,8 @@ html {
 }
 body {
   color: hsla(0, 0%, 0%, 0.8);
-  font-family: 'DIN Pro Cond light';
-  /*font-family: georgia, serif;*/
+  font-family: 'Source Sans Pro', sans-serif !important;
+  /*font-family: 'DIN Pro Cond light';*/
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
@@ -207,6 +208,8 @@ body {
   -ms-font-feature-settings: "kern", "liga", "clig", "calt";
   -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
   font-feature-settings: "kern", "liga", "clig", "calt";
+  -webkit-font-smoothing: antialiased;
+  background-color: #F5F8FB;
 }
 img {
   max-width: 100%;
@@ -229,9 +232,9 @@ h1 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-weight: bold;
+  font-weight: lighter;
   text-rendering: optimizeLegibility;
-  font-size: 2.25rem;
+  font-size: 2.5rem;
   line-height: 1.1;
 }
 h2 {
