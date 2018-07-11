@@ -1,59 +1,17 @@
 import React, {Component} from 'react'
 import Link from 'gatsby-link'
-import auto from '../assets/images/auto.jpg'
-import './index.css'
+import auto from '../assets/images/old_avto.jpg'
+import arrowDown from '../assets/images/arrow_down_white.png'
+import location from '../assets/images/location_icon.svg'
+import clock from '../assets/images/clock-icon.png'
 
+import './index.css'
+import initScroll from '../helpers/scrollTo'
 
 
 class IndexPage extends Component {
 
-  initGoogleMap() {
-    var uluru = {lat: -25.363, lng: 131.044};
-    var map = new google.maps.Map(document.getElementById('map'), {
-      zoom: 4,
-      center: uluru
-    });
-    var marker = new google.maps.Marker({
-      position: uluru,
-      map: map
-    });
-  }
-
-  // initMap() {
-  //
-  // }
-  componentDidMount() {
-    ymaps.ready(function () {
-      const myMap = new window.ymaps.Map('map', {
-        center: [55.751574, 37.573856],
-        zoom: 9
-      }, {
-        searchControlProvider: 'yandex#search'
-      })
-
-      const myPlacemark = new window.ymaps.Placemark([55.751574, 37.573856], {
-        hintContent: 'Собственный значок метки',
-        balloonContent: 'Это красивая метка'
-      }, {
-        iconLayout: 'default#image',
-        iconImageHref: 'images/myIcon.gif',
-        iconImageSize: [30, 42],
-        iconImageOffset: [-3, -42]
-      })
-
-      myMap.geoObjects.add(myPlacemark)
-    })
-  }
-
-
-
-  // componentDidMount() {
-  //   this.initMap()
-  // }
-
-
   render() {
-
     return (
       <div>
         <div className="image-container">
@@ -62,14 +20,41 @@ class IndexPage extends Component {
           <div className="text-container">
             <h1>Автозапчасти</h1>
           </div>
+          <img onClick={() => initScroll('description')} className="arrow-down" src={arrowDown} />
         </div>
-        <section id="description">
-          В нашем машазине вы найдете
+        <section id="description" className="description">
+          <div className="container">
+            <h1>В нашем машазине вы найдете</h1>
+          </div>
         </section>
-        <section id="contacts">
+        <section id="contacts" className="contacts">
+          <div className="container">
+            <div className="address-container">
+              <img src={location} width='50'/>
+              <div className="text">
+                <div>Адрес:</div>
+                <div>n. Туртас, ул. Школьная, д. 3А</div>
+                <div>Тел/факс: 8(34561)25-8-97</div>
+                <div>email: VOAturtas@yandex.ru</div>
+              </div>
+            </div>
+            <div className="time-container">
+              <img src={clock} width='50' />
+              <div className="text">
+                <div> Часы работы: </div>
+                <div> Ежедневно с 9.00 до 20.00</div>
+              </div>
+            </div>
+          </div>
         </section>
-        <div id="map" style={{ height: '400', width: '100%'}}>
-        </div>
+        <section id="map">
+          <iframe
+            src="https://yandex.ru/map-widget/v1/?um=constructor%3A8d77a3bcac829880e23a1c6cffe92d2012db5a3ae4f126a03046a894c6719093&amp;source=constructor"
+            width="100%"
+            height="700"
+            style={{ border: 'none' }}
+          />
+        </section>
       </div>
     )
   }

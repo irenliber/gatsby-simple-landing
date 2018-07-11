@@ -17,9 +17,11 @@ const Header = ({ siteTitle }) => (
         margin: '0 auto',
         maxWidth: 1120,
         padding: '30px 0 20px 0',
+        textAlign: 'right',
+        fontSize: '24px'
       }}
     >
-      <span>contacts</span>
+      <span>КОНТАКТЫ</span>
     </div>
   </div>
 )

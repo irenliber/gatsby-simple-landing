@@ -1,5 +1,5 @@
 html {
-  font-family: sans-serif;
+  font-family: 'DIN Pro Cond light';
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
@@ -198,7 +198,8 @@ html {
 }
 body {
   color: hsla(0, 0%, 0%, 0.8);
-  font-family: georgia, serif;
+  font-family: 'DIN Pro Cond light';
+  /*font-family: georgia, serif;*/
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
@@ -228,8 +229,6 @@ h1 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 2.25rem;
@@ -245,8 +244,9 @@ h2 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  /*font-family: 'DIN Pro Cond light';*/
+  /*font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,*/
+    /*Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;*/
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 1.62671rem;
@@ -262,8 +262,8 @@ h3 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  /*font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,*/
+    /*Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;*/
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 1.38316rem;
@@ -623,4 +623,23 @@ pre tt:after {
   }
 }
 
+@font-face {
+  font-family: 'DIN Pro Cond';
+  font-style: normal;
+  font-weight: normal;
+  src: local('DIN Pro Cond'), url('../assets/fonts/DINPro-Cond.otf') format('opentype')
+}
 
+@font-face {
+  font-family: 'DIN Pro Cond bold';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../assets/fonts/DINPro-CondBold.otf') format('opentype')
+}
+
+@font-face {
+  font-family: 'DIN Pro Cond light';
+  font-style: normal;
+  font-weight: 100;
+  src: url('../assets/fonts/DINPro-CondLight.otf') format('opentype')
+}
